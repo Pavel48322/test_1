@@ -8,7 +8,7 @@ class MainWindow extends Phaser.Scene {
 
         this.load.image(
             'one',
-            './assets/one.png?v=0.0.1',
+            './assets/one.png?v=0.0.2',
         );
 
 
@@ -18,17 +18,18 @@ class MainWindow extends Phaser.Scene {
 
         this.add
         .image(
-            0,
+            document.documentElement.clientWidth/ 2,
             0,
             'one'
-        ).setOrigin(0)
+        ).setOrigin(0.5, 0)
+        .setScale(0.35)
 
         }
 }
 
 export const gameSize = {
-    width: 1080,
-    height: 796,
+    width: document.documentElement.clientWidth,
+    height: window.screen.availHeight,
 }
 
 
@@ -39,8 +40,8 @@ const config = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
         // Or set parent divId here
-        width: 1080,
-        height: 796,
+        width: document.documentElement.clientWidth,
+        height: window.screen.availHeight,
     },
     //--------------------------------------------------------------------------------
     // При работе с шейдерами дает сбой (шейдеры не работают при включеном параметре)
