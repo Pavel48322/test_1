@@ -22,7 +22,7 @@ class MainWindow extends Phaser.Scene {
             0,
             'one'
         ).setOrigin(0.5, 0)
-        .setScale(0.35)
+        .setScale(0.4)
 
         }
 }
