@@ -22,7 +22,7 @@ class MainWindow extends Phaser.Scene {
             0,
             'one'
         ).setOrigin(0.5, 0)
-        .setScale(1080/window.screen.availHeight)
+        .setScale(window.screen.availHeight/1080)
 
         }
 }
