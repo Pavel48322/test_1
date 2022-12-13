@@ -22,13 +22,13 @@ class MainWindow extends Phaser.Scene {
             0,
             'one'
         ).setOrigin(0.5, 0)
-        .setScale(0.4)
+        .setScale(1080/window.screen.availHeight)
 
         }
 }
 
 export const gameSize = {
-    width: window.screen.availHeight,
+    width: window.screen.availWidth,
     height: window.screen.availHeight,
 }
 
