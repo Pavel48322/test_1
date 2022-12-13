@@ -28,7 +28,7 @@ class MainWindow extends Phaser.Scene {
 }
 
 export const gameSize = {
-    width: document.documentElement.clientWidth,
+    width: window.screen.availHeight,
     height: window.screen.availHeight,
 }
 
