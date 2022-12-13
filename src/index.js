@@ -1,9 +1,30 @@
-import Phaser, {Scale} from 'phaser';
-import { MainWindow } from './scenes/MainWindow';
-import LasersOlvera from "./scenes/classes/LasersOlvera";
-import LasersYouWin from "./scenes/classes/LasersYouWin";
-import LasersLogo from "./scenes/classes/LasersLogo";
-import LasersLogoUltimate from "./scenes/classes/LasersLogoUltimate";
+
+class MainWindow extends Phaser.Scene {
+    constructor() {
+        super('MainWindow');
+    }
+
+    preload(){
+
+        this.load.image(
+            'one',
+            'src/assets/one.png',
+        );
+
+
+    }
+
+    create(){
+
+        this.add
+        .image(
+            0,
+            0,
+            'one'
+        ).setOrigin(0)
+
+        }
+}
 
 export const gameSize = {
     width: 1080,
@@ -13,19 +34,13 @@ export const gameSize = {
 
 const config = {
     type: Phaser.AUTO,
-    parent: 'GoldRush',
+    parent: prov,
     scale: {
-        mode: Scale.FIT,
-        autoCenter: Scale.CENTER_BOTH,
-        width: gameSize.width,
-        height: gameSize.height,
-    },
-    physics: {
-        default: 'arcade',
-        arcade: {
-            gravity: { y: 0 },
-            debug: false
-        },
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        // Or set parent divId here
+        width: 1080,
+        height: 796,
     },
     //--------------------------------------------------------------------------------
     // При работе с шейдерами дает сбой (шейдеры не работают при включеном параметре)
@@ -35,8 +50,7 @@ const config = {
     //     antialiasGL: false,
     // },
     //--------------------------------------------------------------------------------
-    pipeline: { LasersOlvera, LasersYouWin, LasersLogo, LasersLogoUltimate },
     scene: [MainWindow]
 };
 
-export const game = new Phaser.Game(config);
+const game = new Phaser.Game(config);

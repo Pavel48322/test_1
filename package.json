@@ -1,4 +1,5 @@
 {
+  
   "name": "phaser3-project-template",
   "version": "1.1.2",
   "description": "A Phaser 3 Project Template",
@@ -7,6 +8,7 @@
     "build": "webpack --config webpack/prod.js ",
     "start": "webpack-dev-server --config webpack/base.js --open"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/photonstorm/phaser3-project-template.git"
