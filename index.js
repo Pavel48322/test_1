@@ -18,18 +18,13 @@ class MainWindow extends Phaser.Scene {
 
         this.add
         .image(
-            document.documentElement.clientWidth/ 2,
+            (document.documentElement.clientWidth + 100 )/ 2,
             0,
             'one'
         ).setOrigin(0.5, 0)
         .setScale(window.screen.availHeight/1080)
 
         }
-}
-
-export const gameSize = {
-    width: window.screen.availWidth,
-    height: window.screen.availHeight,
 }
 
 
@@ -40,7 +35,7 @@ const config = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
         // Or set parent divId here
-        width: document.documentElement.clientWidth,
+        width: document.documentElement.clientWidth + 100,
         height: window.screen.availHeight,
     },
     //--------------------------------------------------------------------------------
